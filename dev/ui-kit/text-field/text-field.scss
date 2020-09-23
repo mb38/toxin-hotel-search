@@ -1,0 +1,48 @@
+@import '../../static/styles/utils/vars';
+
+.text-field {
+  border: 1px solid $dark-shade-25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  padding: 9px 14px;
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+  outline: none;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $dark-shade-75;
+    border: 1px solid $dark-shade-50;
+  }
+  &::placeholder {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-shade-25;
+  }
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-shade;
+  margin-top: 5px;
+  position: relative;
+}
+
+//.textfield-hover-focus .input-text {
+//  border: 1px solid $dark-shade-50;
+//  &::placeholder {
+//    color: $dark-shade-75;
+//  }
+//}

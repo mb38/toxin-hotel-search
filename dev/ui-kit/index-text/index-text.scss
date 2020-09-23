@@ -1,0 +1,17 @@
+@import '../../static/styles/utils/vars';
+
+.index-text {
+  @include title-h2;
+  transition: all ease-in .1s;
+  padding-bottom: 5px;
+  &:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px $black;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+  }
+}

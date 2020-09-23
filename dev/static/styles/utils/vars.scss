@@ -1,0 +1,81 @@
+// Colors
+$white: #fff;
+$black: #000;
+
+$dark-shade: #1F2041;
+$dark-shade-75: rgba(#1F2041, .75);
+$dark-shade-50: rgba(#1F2041, .50);
+$dark-shade-25: rgba(#1F2041, .25);
+$dark-shade-5: rgba(#1F2041, .05);
+$purple: #BC9CFF;
+$green: #6FCF97;
+$grey: #E5E5E5;
+$blue: #8BA4F9;
+
+$error: #FC5C65;
+
+$primary-gradient: 180deg, #BC9CFF 0%, #8BA4F9 100%;
+$primary-gradient-transp: 180deg, #BC9CFF40 0%, #8BA4F940 100%;
+$secondary-gradient: 180deg, #6FCF97 0%, #66D2EA 100%;
+$dark-gradient: 180deg, #8A8B8F 0%, #434E76 100%;
+$beautiful-gradient: 180deg, #FFE29C 0%, #FFBA9C 100%;
+
+// Sizes
+$base-font-size: 16px;
+
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
+
+$fhd: 1920px;
+
+$content: 1000px;
+
+// Fonts
+$mainFont: 'Montserrat', 'Open Sans', sans-serif;
+$secondaryFont: 'Quicksand', 'Open Sans', sans-serif;
+$iconicFont: 'Material-Design-Iconic-Font';
+
+$font-montserrat: 'Montserrat', sans-serif;
+$font-quicksand: 'Quicksand', sans-serif;
+$font-opensans: 'Open Sans', sans-serif;
+$font-material: 'Material-Design-Iconic-Font';
+
+//Typography
+@mixin title-h1 {
+  font-family: $font-quicksand;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: $dark-shade;
+}
+
+@mixin title-h2 {
+  font-family: $font-quicksand;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: $dark-shade;
+}
+
+@mixin title-h3 {
+  font-family: $font-montserrat;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-shade;
+}
+
+@mixin body-text {
+  font-family: $font-montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+}
+

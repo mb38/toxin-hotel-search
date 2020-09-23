@@ -1,0 +1,22 @@
+mixin button-primary(text, link, small)
+	if small
+		a.button.button-primary.button-primary--small(href=link)&attributes(attributes) #{text}
+	else
+		a.button.button-primary(href=link)&attributes(attributes) #{text}
+
+mixin button-secondary(args)
+	a.button.button-secondary(href=args.link)&attributes(attributes)
+		.button-secondary__inner #{args.text}
+		.button-secondary__outer
+
+mixin button-single(text, link)
+		a.button.button-single(href=link)&attributes(attributes) #{text}
+	
+mixin button-single-dark(text, link)
+	a.button.button-single-dark(href=link)&attributes(attributes) #{text}
+
+
+mixin button-wide(text, link)
+		a.button.button-wide(href=link)&attributes(attributes) #{text}
+			.button-wide__arrow
+				i.zmdi.zmdi-arrow-right.zmdi-hc-2x

@@ -1,0 +1,23 @@
+extends layout/ui-layout
+include ../ui-kit/index-text/index-text
+
+block variables
+	-var title = 'Главная страница'
+
+block content
+	.container
+		.index
+
+			.index__content
+				.index__subtitle UI-Kit
+					.index__item
+						+index-text({
+							link: "colors-type.html",
+							text: "Colors & type"
+						})
+					.index__item
+						+index-text({
+							link: "form-elements.html",
+							text: "Form elements"
+						})
+				.index__subtitle Website pages

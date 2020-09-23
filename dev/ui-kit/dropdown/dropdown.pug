@@ -1,0 +1,20 @@
+mixin dropdown(placeholder, list, apply, dropdownValue)
+  .dropdown&attributes(attributes)
+    label.dropdown__textfield
+      input.dropdown__text(type='text' placeholder=placeholder data-dropdown-input name="dropdown" value=dropdownValue)
+      .dropdown__text-arrow
+        i.zmdi.zmdi-chevron-down
+    if list
+      .dropdown-list
+        each item in list
+          .dropdown-list__item
+            .dropdown-list__item-text(data-dropdown-text) #{item}
+            .dropdown-list__item-count
+              .dropdown-list__item-minus.dropdown-list__item-minus_unavailable(data-dropdown-minus) -
+              .dropdown-list__item-number(data-dropdown-count) 0
+              .dropdown-list__item-plus(data-dropdown-plus) +
+        .dropdown-list__action(class=(apply?"":"hide"))
+          .dropdown-list__action-apply(data-dropdown-apply)
+            +button-form-single({text: "применить", colorBlue: true, name: "name", type: "button"})
+          .dropdown-list__action-clear.hide(data-dropdown-clear)
+            +button-form-single({text: "очистить", colorBlue: false, name: "name", type: "button"})

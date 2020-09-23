@@ -1,0 +1,22 @@
+@import "../utils/vars";
+
+.index {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__subtitle {
+    display: flex;
+    flex-direction: column;
+    @include title-h1;
+  }
+  &__item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,114 @@
+@import "../utils/vars";
+
+.colors-type {
+  padding-top: 145px;
+  padding-bottom: 145px;
+  display: flex;
+  @media (min-width: 351px) and (max-width: 1439px) {
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 350px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.colors-type__colors {
+  width: 61%;
+  min-width: 270px;
+
+  @media (max-width: 1199px) {
+    width: auto;
+    margin-right: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+.colors-type__title {
+  width: 39%;
+  @media (max-width: 1199px) {
+    width: auto;
+  }
+}
+
+.colors-type__colors-item {
+  margin-bottom: 20px;
+}
+
+.colors-type__title-item {
+  max-width: 355px;
+  margin-bottom: 50px;
+  margin-left: 65px;
+  position: relative;
+
+  p {
+    padding-right: 40px;
+  }
+
+  &_h1:before,
+  &_h2:before,
+  &_h3:before,
+  &_body:before {
+    position: absolute;
+    content: "H1";
+    top: 0;
+    left: -58px;
+    color: $dark-shade-25;
+    font-family: $font-montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &_h2:before {
+    content: "H2";
+    left: -56px;
+    font-family: $font-montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 23px;
+  }
+
+  &_h3 {
+    margin-bottom: 47px;
+  }
+
+  &_h3:before {
+    content: "H3";
+    left: -47px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  
+  &_body:before {
+    content: "Body";
+    left: -67px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.colors-type__title_h1 {
+  @include title-h1
+}
+
+.colors-type__title_h2 {
+  @include title-h2
+}
+
+.colors-type__title_h3 {
+  @include title-h3
+}
+
+.colors-type__title_text {
+  @include body-text
+}

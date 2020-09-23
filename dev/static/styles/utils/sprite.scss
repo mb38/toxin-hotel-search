@@ -1,0 +1,156 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-avatar-name: 'icon-avatar';
+$icon-avatar-x: 0px;
+$icon-avatar-y: 45px;
+$icon-avatar-offset-x: 0px;
+$icon-avatar-offset-y: -45px;
+$icon-avatar-width: 48px;
+$icon-avatar-height: 48px;
+$icon-avatar-total-width: 159px;
+$icon-avatar-total-height: 112px;
+$icon-avatar-image: '../images/sprite/sprite.png';
+$icon-avatar: (0px, 45px, 0px, -45px, 48px, 48px, 159px, 112px, '../images/sprite/sprite.png', 'icon-avatar', );
+$icon-checkbox-name: 'icon-checkbox';
+$icon-checkbox-x: 59px;
+$icon-checkbox-y: 98px;
+$icon-checkbox-offset-x: -59px;
+$icon-checkbox-offset-y: -98px;
+$icon-checkbox-width: 10px;
+$icon-checkbox-height: 9px;
+$icon-checkbox-total-width: 159px;
+$icon-checkbox-total-height: 112px;
+$icon-checkbox-image: '../images/sprite/sprite.png';
+$icon-checkbox: (59px, 98px, -59px, -98px, 10px, 9px, 159px, 112px, '../images/sprite/sprite.png', 'icon-checkbox', );
+$icon-logo-page-name: 'icon-logo-page';
+$icon-logo-page-x: 53px;
+$icon-logo-page-y: 45px;
+$icon-logo-page-offset-x: -53px;
+$icon-logo-page-offset-y: -45px;
+$icon-logo-page-width: 48px;
+$icon-logo-page-height: 48px;
+$icon-logo-page-total-width: 159px;
+$icon-logo-page-total-height: 112px;
+$icon-logo-page-image: '../images/sprite/sprite.png';
+$icon-logo-page: (53px, 45px, -53px, -45px, 48px, 48px, 159px, 112px, '../images/sprite/sprite.png', 'icon-logo-page', );
+$icon-logo-name: 'icon-logo';
+$icon-logo-x: 0px;
+$icon-logo-y: 0px;
+$icon-logo-offset-x: 0px;
+$icon-logo-offset-y: 0px;
+$icon-logo-width: 106px;
+$icon-logo-height: 40px;
+$icon-logo-total-width: 159px;
+$icon-logo-total-height: 112px;
+$icon-logo-image: '../images/sprite/sprite.png';
+$icon-logo: (0px, 0px, 0px, 0px, 106px, 40px, 159px, 112px, '../images/sprite/sprite.png', 'icon-logo', );
+$icon-logo1-name: 'icon-logo1';
+$icon-logo1-x: 111px;
+$icon-logo1-y: 53px;
+$icon-logo1-offset-x: -111px;
+$icon-logo1-offset-y: -53px;
+$icon-logo1-width: 40px;
+$icon-logo1-height: 40px;
+$icon-logo1-total-width: 159px;
+$icon-logo1-total-height: 112px;
+$icon-logo1-image: '../images/sprite/sprite.png';
+$icon-logo1: (111px, 53px, -111px, -53px, 40px, 40px, 159px, 112px, '../images/sprite/sprite.png', 'icon-logo1', );
+$icon-patricia-name: 'icon-patricia';
+$icon-patricia-x: 111px;
+$icon-patricia-y: 0px;
+$icon-patricia-offset-x: -111px;
+$icon-patricia-offset-y: 0px;
+$icon-patricia-width: 48px;
+$icon-patricia-height: 48px;
+$icon-patricia-total-width: 159px;
+$icon-patricia-total-height: 112px;
+$icon-patricia-image: '../images/sprite/sprite.png';
+$icon-patricia: (111px, 0px, -111px, 0px, 48px, 48px, 159px, 112px, '../images/sprite/sprite.png', 'icon-patricia', );
+$icon-toxin-name: 'icon-toxin';
+$icon-toxin-x: 0px;
+$icon-toxin-y: 98px;
+$icon-toxin-offset-x: 0px;
+$icon-toxin-offset-y: -98px;
+$icon-toxin-width: 54px;
+$icon-toxin-height: 14px;
+$icon-toxin-total-width: 159px;
+$icon-toxin-total-height: 112px;
+$icon-toxin-image: '../images/sprite/sprite.png';
+$icon-toxin: (0px, 98px, 0px, -98px, 54px, 14px, 159px, 112px, '../images/sprite/sprite.png', 'icon-toxin', );
+$spritesheet-width: 159px;
+$spritesheet-height: 112px;
+$spritesheet-image: '../images/sprite/sprite.png';
+$spritesheet-sprites: ($icon-avatar, $icon-checkbox, $icon-logo-page, $icon-logo, $icon-logo1, $icon-patricia, $icon-toxin, );
+$spritesheet: (159px, 112px, '../images/sprite/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

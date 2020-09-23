@@ -1,0 +1,35 @@
+extends ../layout/ui-layout
+include ../../ui-kit/colors/colors
+
+block variables
+	-var title = 'Colors & Type'
+
+block content
+	.ui-kit
+		.ui-kit-icon.icon-logo-page
+	.container
+		.colors-type
+			.colors-type__colors
+				.colors-type__colors-item
+					+colors("#1F2041", "#1F2041", "Dark Shade 100%")
+				.colors-type__colors-item
+					+colors("#1F2041BF", "#1F2041", "Dark Shade 75%")
+				.colors-type__colors-item
+					+colors("#1F204180", "#1F2041", "Dark Shade 50%")
+				.colors-type__colors-item
+					+colors("#1F204140", "#1F2041", "Dark Shade 25%")
+				.colors-type__colors-item
+					+colors("#1F20410D", "#1F2041", "Dark Shade 5%")
+				.colors-type__colors-item
+					+colors("#BC9CFF", "#BC9CFF", "Purple")
+				.colors-type__colors-item
+					+colors("#6FCF97", "#6FCF97", "Green")
+			.colors-type__title
+				.colors-type__title-item.colors-type__title-item_h1
+					h1.colors-type__title_h1 This one is the sub-section or widget title
+				.colors-type__title-item.colors-type__title-item_h2
+					h2.colors-type__title_h2 Next one is the item title inside widgets
+				.colors-type__title-item.colors-type__title-item_h3
+					h3.colors-type__title_h3 This is a label or CTA text
+				.colors-type__title-item.colors-type__title-item_body
+					p.colors-type__title_text This is&nbsp;the body text which is&nbsp;used for most of&nbsp;the design, like paragraphs, lists, etc.
