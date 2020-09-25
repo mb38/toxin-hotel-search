@@ -43,6 +43,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+    &_center {
+      margin-bottom: 15px;
+      line-height: 14px;
+    }
   }
   &__default {
     display: inline-block;

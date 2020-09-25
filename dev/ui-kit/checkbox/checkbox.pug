@@ -1,0 +1,6 @@
+mixin checkbox(args)
+    label.checkbox
+        input(type="checkbox" name="checkbox")&attributes(attributes).checkbox__input
+        span.checkbox__checkmark
+            .checkbox__check
+        .checkbox__text #{args.text}
