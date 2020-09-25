@@ -14,6 +14,7 @@ $blue: #8BA4F9;
 
 $error: #FC5C65;
 
+$arrow-gradient: 180deg, #BC9CFF 100%, #8BA4F9 100%;
 $primary-gradient: 180deg, #BC9CFF 0%, #8BA4F9 100%;
 $primary-gradient-transp: 180deg, #BC9CFF40 0%, #8BA4F940 100%;
 $secondary-gradient: 180deg, #6FCF97 0%, #66D2EA 100%;
@@ -32,14 +33,9 @@ $fhd: 1920px;
 $content: 1000px;
 
 // Fonts
-$mainFont: 'Montserrat', 'Open Sans', sans-serif;
-$secondaryFont: 'Quicksand', 'Open Sans', sans-serif;
-$iconicFont: 'Material-Design-Iconic-Font';
-
 $font-montserrat: 'Montserrat', sans-serif;
 $font-quicksand: 'Quicksand', sans-serif;
 $font-opensans: 'Open Sans', sans-serif;
-$font-material: 'Material-Design-Iconic-Font';
 
 //Typography
 @mixin title-h1 {
@@ -66,8 +62,8 @@ $font-material: 'Material-Design-Iconic-Font';
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
-  text-transform: uppercase;
   color: $dark-shade;
+  text-transform: uppercase;
 }
 
 @mixin body-text {

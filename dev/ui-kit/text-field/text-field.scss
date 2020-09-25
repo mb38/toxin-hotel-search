@@ -6,7 +6,7 @@
   border-radius: 4px;
   width: 100%;
   padding: 9px 14px;
-  font-family: $mainFont;
+  font-family: $font-montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -20,7 +20,7 @@
     border: 1px solid $dark-shade-50;
   }
   &::placeholder {
-    font-family: $mainFont;
+    font-family: $font-montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -28,21 +28,32 @@
     color: $dark-shade-25;
   }
 }
-.label {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: $dark-shade;
-  margin-top: 5px;
-  position: relative;
-}
 
-//.textfield-hover-focus .input-text {
-//  border: 1px solid $dark-shade-50;
-//  &::placeholder {
-//    color: $dark-shade-75;
-//  }
-//}
+.text-field-sub {
+  display: flex;
+  justify-content: space-between;
+  border-color: $dark-shade-50;
+  border-radius: 4px;
+  border: 1px solid $dark-shade-25;
+  cursor: pointer;
+  &__text {
+    @include body-text;
+    width: 100%;
+    background: $white;
+    box-sizing: border-box;
+    padding: 9px 40px 9px 15px;
+    outline: none;
+    border: none;
+    &::placeholder {
+      color: $dark-shade-25;
+    }
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $dark-shade-50;
+  }
+  & svg {
+    fill: $purple;
+  }
+}

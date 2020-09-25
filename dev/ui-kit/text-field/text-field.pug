@@ -1,2 +1,7 @@
-mixin textField(inputType, inputPlaceholder, inputName)
-  input.text-field(type=inputType placeholder= inputPlaceholder name=inputName)&attributes(attributes)
+mixin textField(args)
+    input.text-field(type='text' placeholder=args.placeholder value=args.value)&attributes(attributes)
+
+mixin textFieldSub(args)
+    .text-field-sub
+        input.text-field-sub__text(type='text' placeholder=args.placeholder value=args.value)
+        +icon('arrow-right')

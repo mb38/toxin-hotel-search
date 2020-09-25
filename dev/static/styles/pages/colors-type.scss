@@ -98,17 +98,17 @@
 }
 
 .colors-type__title_h1 {
-  @include title-h1
+  @include title-h1;
 }
 
 .colors-type__title_h2 {
-  @include title-h2
+  @include title-h2;
 }
 
 .colors-type__title_h3 {
-  @include title-h3
+  @include title-h3;
 }
 
 .colors-type__title_text {
-  @include body-text
+  @include body-text;
 }

@@ -1,4 +1,7 @@
 extends ../layout/ui-layout
+include ../../ui-kit/text-field/text-field
+include ../../ui-kit/dropdown/dropdown
+include ../../ui-kit/title-block/title-block
 
 block variables
   - var title = 'Form elements';
@@ -7,4 +10,50 @@ block content
   .ui-kit
     .ui-kit-icon.icon-logo-page
   .container
-
+    .form-elements
+      .form-elements__col
+        //TEXT FIELD
+        .form-elements__item
+          .form-elements__title-wrap
+            +titleBlock({text: 'text field'})
+            .form-elements__default default
+          +textField({placeholder: 'Email'})
+        //TEXT FIELD
+        .form-elements__item
+          .form-elements__title-wrap
+            +titleBlock({text: 'text field'})
+            .form-elements__default hover / focus
+          +textField({value: 'This is pretty awesome'})
+        //DROPDOWN
+        .form-elements__item
+          .form-elements__title-wrap
+            +titleBlock({text: 'dropdown'})
+            .form-elements__default default
+          +dropdown({text: 'Сколько гостей'})
+        //MASKED TEXT FIELD
+        .form-elements__item
+          .form-elements__title-wrap
+            +titleBlock({text: 'masked text field'})
+            .form-elements__default default
+          +textField({placeholder: 'ДД.ММ.ГГГГ'})
+        //DATE DROPDOWN
+        .form-elements__item
+          .form-elements__item_flex
+            .form-elements__item_flex-col
+              .form-elements__title-wrap
+                +titleBlock({text: 'date dropdown'})
+              +dropdown({text: 'ДД.ММ.ГГГГ'})
+            .form-elements__item_flex-col
+              .form-elements__title-wrap
+                +titleBlock({text: 'date dropdown'})
+              +dropdown({text: '19.08.2019'})
+        //FILTER DATE DROPDOWN
+        .form-elements__item
+          .form-elements__title-wrap
+            +titleBlock({text: 'filter date dropdown'})
+          +dropdown({text: '19 авг-23 авг'})
+        //SUBSCRIPTION TEXT FIELD
+        .form-elements__item
+          .form-elements__title-wrap
+            +titleBlock({text: 'subscription text field'})
+          +textFieldSub({placeholder: 'Email'})

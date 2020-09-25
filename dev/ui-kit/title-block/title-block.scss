@@ -1,0 +1,6 @@
+@import '../../static/styles/utils/vars';
+
+.title-block {
+  display: inline-block;
+  @include title-h3;
+}
