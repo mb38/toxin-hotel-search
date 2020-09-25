@@ -3,6 +3,7 @@ include ../../ui-kit/text-field/text-field
 include ../../ui-kit/dropdown/dropdown
 include ../../ui-kit/title-block/title-block
 include ../../ui-kit/checkbox/checkbox
+include ../../ui-kit/radio-buttons/radio-buttons
 
 block variables
   - var title = 'Form elements';
@@ -58,18 +59,31 @@ block content
           .form-elements__title-wrap
             +titleBlock({text: 'subscription text field'})
           +textFieldSub({placeholder: 'Email'})
+
+
       .form-elements__col
         //CHECKBOX BUTTONS
-        .form-elements__item
+        .form-elements__item_center
           .form-elements__title-wrap_center
             +titleBlock({text: 'checkbox buttons'})
           +checkbox({text: 'Можно курить'})
           +checkbox({text: 'Можно с питомцами'})(checked)
           +checkbox({text: 'Можно пригласить гостей (до 10 человек)'})(checked)
         //RADIO BUTTONS
-        .form-elements__item
+        .form-elements__item_center
           .form-elements__title-wrap_center
             +titleBlock({text: 'radio buttons'})
+          .form-elements__item_flex
+            .form-elements__item_flex-col
+              +radioButton({text: 'Мужчина'})(checked)
+            .form-elements__item_flex-col
+              +radioButton({text: 'Женщина'})
+        //TOGGLE
+        .form-elements__item_center
+          .form-elements__title-wrap_center
+            +titleBlock({text: 'toggle'})
+
+
 
 
 

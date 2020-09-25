@@ -1,0 +1,45 @@
+@import '../../static/styles/utils/vars';
+
+.radio-button {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+  &__checkmark {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-top: 3px;
+    margin-top: 3px;
+  }
+  &__check {
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background: transparent;
+  }
+  &__text {
+    padding-left: 10px;
+    @include body-text;
+    color: $dark-shade-50;
+  }
+}
+
+.radio-button__input {
+  display: none;
+  &:checked + .radio-button__checkmark {
+    border: 1px solid $purple;
+  }
+  &:checked + .radio-button__text {
+    color: $dark-shade-75;
+  }
+  &:checked + .radio-button__checkmark .radio-button__check {
+    background: linear-gradient($primary-gradient);
+  }
+}
