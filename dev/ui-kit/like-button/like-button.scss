@@ -1,0 +1,36 @@
+@import '../../static/styles/utils/vars';
+
+.like-button {
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+  height: 20px;
+  background: $white;
+  border: 1px solid $dark-shade-25;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 3px 5px;
+  cursor: pointer;
+  @include body-text;
+  font-size: 10px;
+  line-height: 12px;
+  color: $dark-shade-25;
+  &__number {
+    padding-left: 5px;
+    display: inline-block;
+    text-align: center;
+  }
+  &__heart:before {
+    width: 9px;
+    content: "\f15e";
+    display: block;
+    font-family: $font-icon;
+  }
+  &_checked {
+    border-color: $purple;
+    color: $purple;
+    .like-button__heart:before {
+      content: "\f15f";
+    }
+  }
+}

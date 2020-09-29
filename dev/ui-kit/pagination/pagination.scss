@@ -1,0 +1,41 @@
+@import '../../static/styles/utils/vars';
+
+.pagination {
+  @include body-text;
+  color: $dark-shade-50;
+  width: 240px;
+  &__page{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 15px;
+    &-item {
+      cursor: pointer;
+      box-sizing: border-box;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      padding-top: 13px;
+      &_active {
+        color: $white;
+        font-weight: 700;
+        background: linear-gradient($primary-gradient);
+        border-radius: 22px;
+      }
+      &_arrow {
+        color: $white;
+        padding-top: 8px;
+        background: linear-gradient($secondary-gradient);
+        border-radius: 22px;
+        font-size: 24px;
+        line-height: 20px;
+      }
+    }
+  }
+  &__descr {
+    @include body-text;
+    margin-top: 9px;
+    text-align: center;
+  }
+}

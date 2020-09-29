@@ -1,0 +1,6 @@
+mixin toggle-btn(args)
+    label.toggle
+        input.toggle__input(type="checkbox" name="checkbox")&attributes(attributes)
+        .toggle__checkmark
+            .toggle__check
+        .toggle__text #{args.text}

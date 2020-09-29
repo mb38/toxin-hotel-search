@@ -1,0 +1,14 @@
+mixin range-slider(header, min, max, minRange, maxRange)
+    .range-slider(data-range-slider data-min-range=minRange data-max-range=maxRange)
+        .range-slider__wrap
+            .range-slider__wrap__header #{header}
+            .range-slider__wrap__range
+                span(data-min data-price-format) #{min}
+                <span class="range-slider__wrap__range__rub">Р</span>&nbsp; -
+                span(data-max data-price-format) #{max}
+                <span class="range-slider__wrap__range__rub">Р</span>
+        .range-slider__slider(data-range-slider-field)
+            .range-slider__slider-circle.range-slider__slider-circle_left(data-range-slider-left-item)
+            .range-slider__slider-line(data-range-slider-line)
+            .range-slider__slider-circle.range-slider__slider-circle_right(data-range-slider-right-item)
+        input.input-range-slider(type="text" name="range-slider" value="" data-input-range-slider)

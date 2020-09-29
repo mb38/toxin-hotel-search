@@ -4,6 +4,12 @@ include ../../ui-kit/dropdown/dropdown
 include ../../ui-kit/title-block/title-block
 include ../../ui-kit/checkbox/checkbox
 include ../../ui-kit/radio-buttons/radio-buttons
+include ../../ui-kit/toggle-btn/toggle-btn
+include ../../ui-kit/like-button/like-button
+include ../../ui-kit/rate-button/rate-button
+include ../../ui-kit/range-slider/range-slider
+include ../../ui-kit/buttons/buttons
+include ../../ui-kit/pagination/pagination
 
 block variables
   - var title = 'Form elements';
@@ -75,20 +81,50 @@ block content
             +titleBlock({text: 'radio buttons'})
           .form-elements__item_flex
             .form-elements__item_flex-col
-              +radioButton({text: 'Мужчина'})(checked)
+              +radioButton({text: 'Мужчина', value: 'man'})(checked)
             .form-elements__item_flex-col
-              +radioButton({text: 'Женщина'})
+              +radioButton({text: 'Женщина', value: 'women'})
         //TOGGLE
         .form-elements__item_center
           .form-elements__title-wrap_center
-            +titleBlock({text: 'toggle'})
-
-
-
-
+              +titleBlock({text: 'toggle'})
+          +toggle-btn({text: 'Получать спецпредложения'})(checked)
+          +toggle-btn({text: 'Получать спецпредложения'})
+        //LIKE BUTTON
+        .form-elements__item_center
+          .form-elements__title-wrap_center
+              +titleBlock({text: 'like button'})
+          +like-button('2')
+          +like-button('12', 'checked')
+        //RATE BUTTON
+        .form-elements__item_center
+          .form-elements__title-wrap_center
+              +titleBlock({text: 'rate button'})
+          .form-elements__item_rate
+            +rate-button("4")
+            +rate-button("5")
 
 
       .form-elements__col
-        .form-elements__item
-          .form-elements__title-wrap_center
-            +titleBlock({text: 'range slider'})
+        //RANGE SLIDER
+        .form-elements__item_right
+          +range-slider("range slider", "5000", "10000", "0", "16000")
+        //BUTTONS
+        .form-elements__item_right
+          .form-elements__title-wrap
+            +titleBlock({text: 'buttons'})
+          .form-elements__item_right_btn
+            .form-elements__item_right_btn_item
+              +button-primary({text: 'click me'})
+              +button-primary({text: 'click me'})(class='btn-isClicked')
+            .form-elements__item_right_btn_item
+              +button-border({text: 'click me'})
+              +button-border({text: 'click me'})(class='btn-isClicked')
+            .form-elements__item_right_btn_item
+              +button-single({text: 'click me'})
+              +button-single-black({text: 'click me'})
+            +button-space({text: 'перейти к оплате'})
+        //PAGINATION
+        .form-elements__item_right
+          +pagination({text: '1 – 12 из 100+ вариантов аренды'})
+

@@ -1,0 +1,44 @@
+@import '../../static/styles/utils/vars';
+
+.toggle {
+  margin-bottom: 15px;
+  min-width: 200px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  &__input {
+    display: none;
+  }
+  &__checkmark {
+    min-width: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 20px;
+    border: 1px solid $dark-shade-25;
+    transition: all 0.4s ease;
+    padding-left: 3px;
+    display: flex;
+    padding-top: 3px;
+    margin-top: 2px;
+  }
+  &__check {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: $dark-shade-25;
+    border-radius: 10px;
+    transition: right 0.4s ease;
+  }
+  &__text {
+    padding-left: 10px;
+    @include body-text;
+  }
+}
+
+.toggle__input:checked + .toggle__checkmark {
+  border-color: $purple;
+  padding-left: 23px;
+  & .toggle__check {
+    background: linear-gradient($primary-gradient);
+  }
+}

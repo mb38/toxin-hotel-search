@@ -1,0 +1,11 @@
+mixin pagination(args)
+    .pagination
+        .pagination__page
+            .pagination__page-item.pagination__page-item_active 1
+            .pagination__page-item 2
+            .pagination__page-item 3
+            .pagination__page-item ...
+            .pagination__page-item 15
+            .pagination__page-item.pagination__page-item_arrow
+                i.zmdi.zmdi-arrow-right
+        .pagination__descr #{args.text}

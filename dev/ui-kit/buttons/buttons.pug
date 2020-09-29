@@ -1,0 +1,31 @@
+mixin button-primary(args)
+    a.button.button-primary(href=args.link class!=attributes.class) #{args.text}
+
+mixin button-border(args)
+    a.button.button-border(href=args.link class!=attributes.class)
+        .button-border__inner #{args.text}
+        .button-border__outer
+
+mixin button-single(args)
+    a.button.button-single-purple(href=args.link) #{args.text}
+
+mixin button-single-black(args)
+    a.button.button-single-black(href=args.link) #{args.text}
+
+mixin button-space(args)
+    a.button.button-space(href=args.link) #{args.text}
+        .button-space__arrow
+            i.zmdi.zmdi-arrow-right.zmdi-hc-2x.button-space__arrow_icon
+
+mixin button-form-primary(args)
+    button.button.button-primary(type='button') #{args.text}
+
+mixin button-form-border(args)
+    button.button.button-border(type='button')
+        .button-border__inner #{args.text}
+        .button-border__outer
+
+mixin button-form-space(args)
+    button.button.button-space(type='button') #{args.text}
+        .button-space__arrow
+            i.zmdi.zmdi-arrow-right.button-space__arrow_icon
